@@ -42,9 +42,9 @@ def draw_status():
     if winner is None:
         message = XO.upper() + "'s Turn"
     else:
-        message = winner.upper() + "won !"  
+        message = winner.upper() + " won !"  
     if draw:
-        message = "Game Draw !"
+        message = "Oops, Game Draw !"
 
     font = pg.font.Font(None, 30) 
     text = font.render(message, 1, (255, 255, 255))
