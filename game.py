@@ -34,7 +34,7 @@ def game_initiating_window():
     pg.draw.line(screen, line_color, (width/3,0), (width/3, height), 7)
     pg.draw.line(screen, line_color, (width / 3 * 2, 0), (width / 3 * 2, height), 7)
     pg.draw.line(screen, line_color, (0, height/3), (width, height/3), 7)
-    pg.draw.line(screen, line_color, (0, height/3), (width, height/3 * 2), 7)
+    pg.draw.line(screen, line_color, (0, height/3*2), (width, height/3 * 2), 7)
     draw_status()
 
 def draw_status():
@@ -60,7 +60,7 @@ def check_win():
     for row in range(0, 3):
         if((board[row][0] == board[row][1] == board[row][2]) and (board [row][0] is not None)):
               winner = board[row][0] 
-              pg.draw.line (screen, (250, 0, 0), ((col + 1)* width / 3 - width / 6, 0),((col + 1)* width / 3 - width / 6, height), 4 )
+              pg.draw.line (screen, (250, 0, 0), ((row + 1)* width / 3 - width / 6, 0),((row + 1)* width / 3 - width / 6, height), 4 )
               break
     for col in range(0, 3): 
         if((board[0][col] == board[1][col] == board[2][col]) and (board[0][col] is not None)): 
